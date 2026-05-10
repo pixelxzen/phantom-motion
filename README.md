@@ -52,6 +52,9 @@ phantom-motion/
 ├── assets/                 # 存放公共媒体资源（如打赏二维码、logo）
 ├── references/             # 核心组件库（Three.js片段、GSAP运镜、东方美学代码等）
 ├── scripts/                # 核心引擎脚本（TTS生成、BGM生成、HTML拼装等）
+├── templates/              # Phantom Deck 幻灯片模板库
+├── test/
+│   └── Solar_System_Cinematic/  # 太阳系全量巡演 Phantom Deck 示例（Claude Opus 4 生成）
 ├── tests/                  
 │   └── xingji/             # 《苍穹之轨：钱学森弹道》 完整动画示例与静态资源
 ├── SKILL.md                # 核心智能体底层逻辑系统指令库 (System Prompt V10.0)
@@ -99,9 +102,37 @@ Phantom Motion 被设计为一个极其优雅的 CLI 智能体 Skill。它可以
 
 ---
 
-## 🎬 Showcase: 终极性能阅兵剧本库 (Masterpiece Prompts)
+## 🎬 Showcase: 终极性能阅兵
 
-如果你想体验 V10.0 引擎的极致威力，请直接将以下 5 个 **“导演级提示词”** 复制给你的智能体：
+### 🪐 太阳系全量巡演 — Phantom Deck 示例
+
+> 由 **Claude Opus 4** 全自动生成的 12 页影视级交互式幻灯片，展示 Phantom Deck 引擎的完整能力。
+
+<div align="center">
+  <img src="./test/Solar_System_Cinematic/hero.png" width="100%" alt="Solar System Cinematic - Phantom Deck">
+</div>
+
+**技术亮点：**
+- 🌞 **FBM 着色器太阳** — 5 层分形噪声模拟日冕喷发，实时动态渲染
+- 🪐 **14 颗卫星系统** — 每颗卫星独立程序化纹理（Io 火山黄、Europa 冰裂纹、Titan 橙色雾霾...）
+- ☄️ **哈雷彗星** — 3000 粒子彗尾 + 椭圆轨道运行
+- 🎨 **SVG 巨幕动画标题** — 三层叠加描边动画 + bevel 立体滤镜 + 发光层
+- ✏️ **WYSIWYG 双击编辑** — 所见即所得，双击任意文字即可修改，自动保存至 localStorage
+- 🔭 **真实天文数据** — 对数缩放行星比例、可视轨道线、轴倾斜（天王星 97.77°）
+- 💡 **多层光照系统** — PointLight 太阳光 + AmbientLight + DirectionalLight 补光 + emissive 自发光
+
+**运行方式：**
+```bash
+cd test/Solar_System_Cinematic
+python3 -m http.server 8080
+# 打开 http://localhost:8080
+```
+
+---
+
+### 📜 导演级提示词 (Masterpiece Prompts)
+
+如果你想体验 V10.0 引擎的极致威力，请直接将以下 5 个 **"导演级提示词"** 复制给你的智能体：
 
 <details>
 <summary><b>♟️ 剧本 01：《神之一手》（30秒 · 极速高燃）</b></summary>
