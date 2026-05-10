@@ -127,12 +127,15 @@ function showSlide(n) {
 function nextSlide() { showSlide(current + 1); }
 function prevSlide() { showSlide(current - 1); }
 document.addEventListener('keydown', (e) => {
+    if (document.activeElement.contentEditable === 'true') return;
     if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
     if (e.key === 'ArrowLeft') prevSlide();
 });
 
 // ── Animations ──
 function runAnimation(idx) {
+    const activeSlide = slides[idx];
+    gsap.set(activeSlide.querySelectorAll('*'), { clearProps: "all" });
     if (idx === 0) animTitle();
     if (idx === 1) animSpec();
     if (idx === 2) animChart();

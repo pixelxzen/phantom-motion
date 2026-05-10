@@ -31,9 +31,9 @@
 
 Code animations on the market are often "stiff element translations" with "highly robotic narration." **Phantom Motion** was born to end this by combining directorial restraint with graphics perfection in an AI agent:
 
-- **🎙️ Audio-First Engine**: Generates sound before drawing visuals. Utilizes TTS to obtain an absolute timeline, enabling GSAP `Duck & Swell` (BGM automatically yielding to vocals) for microsecond audio-visual synchronization.
+- **🎙️ Audio-First Engine**: Generates sound before drawing visuals. Utilizes TTS to obtain an absolute timeline, enabling GSAP `Duck & Swell` (BGM automatically yielding to vocals) for microsecond audio-visual synchronization. Supports Gemini 3.1 Flash TTS latest API schema.
 - **🎥 Script-Driven Cinematic Camera Rig**: Strictly prohibits random camera flying! Built-in classic cinematic camera movements. The LLM schedules the 3D camera precisely using GSAP tracking proxy technology based on script emotion.
-- **🏛️ 3D Heritage & Hologram Engine**: Directly supports GLTF/GLB high-poly PBR model loading and one-click switching to `Hologram Mode` (glowing mesh perspective), perfectly deducing the collision of cultural heritage and modern technology.
+- **🏛️ 3D Heritage & Hologram Engine**: Directly supports GLTF/GLB high-poly PBR model loading and one-click switching to `Hologram Mode` (glowing mesh perspective). Supports precision 30FPS/60FPS physical-grade frame recording.
 - **📊 Advanced Data Visualization Engine**: Discards frame-dropping chart libraries, using `D3.js + GSAP` to map real data into high-end smooth curves (Spline) with dynamic growth animations synchronized with narration.
 - **🏷️ SVGL Brand Library Integration**: Native integration with SVGL API. By just providing a well-known brand name (like GitHub, OpenAI), AI automatically downloads and inlines its HD vector SVG Logo.
 - **✨ AetherViz Interactive Architecture (V9.0)**: Newly introduced hybrid coordinate system and glass-morphism control panels, enabling seamless transition from static presentation to a 3D interactive lab mode with draggable parameters.
@@ -132,15 +132,14 @@ If you want to experience the extreme power of the V9.0 engine, directly copy th
 > **[Last 3s] Outro**: Line peaks into highlight, then linearly fades to black."
 </details>
 
-<details>
+<details open>
 <summary><b>🪐 Script 04: "Sky Orbit: Qian Xuesen Trajectory" (90s · Hardcore Sci-Fi)</b></summary>
 
 <div align="center">
-  <a href="https://github.com/Pixelxzen/phantom-motion/blob/main/tests/xingji/output_1080p_16_9_SD.mp4">
-    <img src="./tests/xingji/xingji-cover.png" alt="Sky Orbit 1080P Demo" width="100%">
-  </a>
+  <video src="https://github.com/user-attachments/assets/8c353bea-9410-4e16-80dc-2528f7ce583d" width="100%" poster="./tests/xingji/xingji-cover.png" controls muted loop playsinline autoplay>
+  </video>
   <br>
-  <p><i>(Official 1080P Landscape Render. Click the cover image above to go to the playback page and experience the epic texture of GPGPU particles and Charon's voice)</i></p>
+  <p><i>(Official 1080P Landscape Render. Experience the epic texture of GPGPU particles and Charon's voice)</i></p>
 </div>
 
 > "Call max scientific computation, create a 90s hardcore popular science of Qian Xuesen trajectory (Boost-glide).

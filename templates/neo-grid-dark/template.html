@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syncopate:wght@700&display=swap" rel="stylesheet">
     <!-- Dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- 引入 Flip 插件以支持 Magic Move -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
@@ -27,27 +29,35 @@
 
 <div class="phantom-deck">
     
-    <!-- Slide 1: Title -->
-    <div class="phantom-slide">
+    <!-- Slide 1: Title (Contextualized: Neural Network latency) -->
+    <div class="phantom-slide active">
+        <!-- 随机性：装饰点位 -->
+        <div class="decor-dot" style="top: 10%; left: 15%;"></div>
+        <div class="decor-dot" style="top: 85%; left: 80%;"></div>
+        <div class="decor-dot" style="top: 20%; right: 10%;"></div>
+
         <div class="glass-panel" style="text-align: center;">
-            <h1 class="slide-title">CYBERPUNK DATA</h1>
-            <p class="slide-subtitle">The Future of Interactive Visual Narratives</p>
+            <!-- 神奇移动：分配 data-flip-id -->
+            <h1 class="slide-title" data-flip-id="main-title">NEURAL LATENCY</h1>
+            <p class="slide-subtitle">High-fidelity analysis of synaptic propagation delays in distributed AI clusters</p>
         </div>
     </div>
 
-    <!-- Slide 2: 2D Line Chart (D3) -->
+    <!-- Slide 2: 2D Line Chart (Contextualized: Packet Loss) -->
     <div class="phantom-slide">
-        <h2 class="slide-heading">REVENUE TRAJECTORY</h2>
-        <div class="chart-container glass-panel" id="chart-revenue" style="width: 800px; height: 400px; position: relative;"></div>
+        <div class="decor-dot" style="top: 5%; right: 5%;"></div>
+        <!-- 神奇移动：跨页同 ID 元素 -->
+        <h2 class="slide-heading" data-flip-id="main-title" style="font-size: 1.5rem; position: absolute; top: 5%; left: 5%;">NEURAL LATENCY // <span style="color:var(--text-secondary)">PACKET LOSS RATIO</span></h2>
+        
+        <div class="chart-container glass-panel" id="chart-revenue" style="width: 850px; height: 450px; position: relative; margin-top: 5rem;"></div>
     </div>
 
-    <!-- Slide 3: 3D Bar Chart (Three.js) -->
+    <!-- Slide 3: 3D Bar Chart (Contextualized: Node Health) -->
     <div class="phantom-slide">
-        <!-- The 3D container is absolutely positioned behind the content -->
         <div class="chart-container-3d" id="chart-3d-bars" style="width: 100vw; height: 100vh; position: absolute; top:0; left:0; z-index:-1;"></div>
-        <div class="glass-panel" style="position: absolute; bottom: 10%; left: 10%;">
-            <h2 class="slide-heading">GLOBAL DISTRIBUTION</h2>
-            <p class="slide-text">Physical nodes represented in 3D WebGL space.</p>
+        <div class="glass-panel" style="position: absolute; bottom: 12%; left: 8%;">
+            <h2 class="slide-heading">COMPUTE NODE HEALTH</h2>
+            <p class="slide-text">Real-time status of 512 edge computing nodes across the EMEA region.</p>
         </div>
     </div>
 
@@ -57,12 +67,21 @@
 <script>
 window.slideAnimations = window.slideAnimations || {};
 
-// Slide 0: Title Animation
+// Slide 0: Title Animation (Randomized Stagger)
 window.slideAnimations[0] = {
     create: function() {
         const tl = gsap.timeline();
-        tl.from(".slide-title", { y: 50, opacity: 0, duration: 1, ease: "power3.out" })
-          .from(".slide-subtitle", { y: 20, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5");
+        tl.from(".slide-title", { 
+            y: 40, opacity: 0, duration: 1.2, ease: "power4.out" 
+        })
+        .from(".slide-subtitle", { 
+            y: 20, opacity: 0, duration: 1, ease: "power2.out" 
+        }, "-=0.8")
+        .from(".decor-dot", {
+            scale: 0, opacity: 0, duration: 0.8, 
+            stagger: { each: 0.2, from: "random" }, // 随机性
+            ease: "back.out(2)"
+        }, "-=0.5");
         return tl;
     }
 };

@@ -1,0 +1,32 @@
+[
+  {
+    "action": "goto http://localhost:8081/templates/swiss-international/template.html",
+    "relativeTimeSec": 5,
+    "timestamp": "2026-05-08T04:22:37.576Z"
+  },
+  {
+    "action": "screenshot swiss.png",
+    "relativeTimeSec": 10,
+    "timestamp": "2026-05-08T04:22:42.511Z"
+  },
+  {
+    "action": "goto http://localhost:8081/templates/bento-grid/template.html",
+    "relativeTimeSec": 15.2,
+    "timestamp": "2026-05-08T04:22:47.710Z"
+  },
+  {
+    "action": "screenshot bento.png",
+    "relativeTimeSec": 18.1,
+    "timestamp": "2026-05-08T04:22:50.642Z"
+  },
+  {
+    "action": "goto http://localhost:8081/templates/retro-terminal/template.html",
+    "relativeTimeSec": 24.6,
+    "timestamp": "2026-05-08T04:22:57.111Z"
+  },
+  {
+    "action": "screenshot retro.png",
+    "relativeTimeSec": 27.3,
+    "timestamp": "2026-05-08T04:22:59.890Z"
+  }
+]
