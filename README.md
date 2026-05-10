@@ -53,10 +53,9 @@ phantom-motion/
 ├── references/             # 核心组件库（Three.js片段、GSAP运镜、东方美学代码等）
 ├── scripts/                # 核心引擎脚本（TTS生成、BGM生成、HTML拼装等）
 ├── templates/              # Phantom Deck 幻灯片模板库
-├── test/
-│   └── Solar_System_Cinematic/  # 太阳系全量巡演 Phantom Deck 示例（Claude Opus 4 生成）
 ├── tests/                  
-│   └── xingji/             # 《苍穹之轨：钱学森弹道》 完整动画示例与静态资源
+│   ├── xingji/             # 《苍穹之轨：钱学森弹道》 完整动画示例与静态资源
+│   └── Solar_System_Cinematic/  # 🪐 太阳系全量巡演 Phantom Deck 示例（Claude Opus 4 生成）
 ├── SKILL.md                # 核心智能体底层逻辑系统指令库 (System Prompt V10.0)
 ├── logo.svg                # 动态 SVG 徽标
 ├── README.md               # 中文文档
@@ -109,7 +108,7 @@ Phantom Motion 被设计为一个极其优雅的 CLI 智能体 Skill。它可以
 > 由 **Claude Opus 4** 全自动生成的 12 页影视级交互式幻灯片，展示 Phantom Deck 引擎的完整能力。
 
 <div align="center">
-  <img src="./test/Solar_System_Cinematic/hero.png" width="100%" alt="Solar System Cinematic - Phantom Deck">
+  <img src="./tests/Solar_System_Cinematic/hero.png" width="100%" alt="Solar System Cinematic - Phantom Deck">
 </div>
 
 **技术亮点：**
@@ -123,7 +122,7 @@ Phantom Motion 被设计为一个极其优雅的 CLI 智能体 Skill。它可以
 
 **运行方式：**
 ```bash
-cd test/Solar_System_Cinematic
+cd tests/Solar_System_Cinematic
 python3 -m http.server 8080
 # 打开 http://localhost:8080
 ```
