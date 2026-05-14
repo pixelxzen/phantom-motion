@@ -1,0 +1,37 @@
+[
+	{
+		"action": "navigate http://localhost:8080/tesla_promo.html",
+		"relativeTimeSec": 4.5,
+		"timestamp": "2026-05-11T16:28:09.908Z"
+	},
+	{
+		"action": "screenshot 01_mission.png",
+		"relativeTimeSec": 8.9,
+		"timestamp": "2026-05-11T16:28:14.273Z"
+	},
+	{
+		"action": "click #btn-play",
+		"relativeTimeSec": 9.1,
+		"timestamp": "2026-05-11T16:28:14.506Z"
+	},
+	{
+		"action": "screenshot 02_evolution.png",
+		"relativeTimeSec": 17.3,
+		"timestamp": "2026-05-11T16:28:22.715Z"
+	},
+	{
+		"action": "screenshot 03_stats.png",
+		"relativeTimeSec": 27.6,
+		"timestamp": "2026-05-11T16:28:32.970Z"
+	},
+	{
+		"action": "screenshot 04_tech.png",
+		"relativeTimeSec": 37.8,
+		"timestamp": "2026-05-11T16:28:43.230Z"
+	},
+	{
+		"action": "screenshot 05_final.png",
+		"relativeTimeSec": 48.1,
+		"timestamp": "2026-05-11T16:28:53.491Z"
+	}
+]

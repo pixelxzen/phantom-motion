@@ -1,102 +1,102 @@
 [
-  {
-    "action": "visit http://localhost:8081/templates/cyber-glitch/template.html",
-    "relativeTimeSec": 5,
-    "timestamp": "2026-05-08T04:43:16.816Z"
-  },
-  {
-    "action": "navigate http://localhost:8081/templates/cyber-glitch/template.html",
-    "relativeTimeSec": 11.1,
-    "timestamp": "2026-05-08T04:43:22.921Z"
-  },
-  {
-    "action": "screenshot cyber1.png",
-    "relativeTimeSec": 14.4,
-    "timestamp": "2026-05-08T04:43:26.207Z"
-  },
-  {
-    "action": "exec nextSlide()",
-    "relativeTimeSec": 14.7,
-    "timestamp": "2026-05-08T04:43:26.464Z"
-  },
-  {
-    "action": "click .nav-next",
-    "relativeTimeSec": 28.2,
-    "timestamp": "2026-05-08T04:43:40.023Z"
-  },
-  {
-    "action": "screenshot cyber2.png",
-    "relativeTimeSec": 29.5,
-    "timestamp": "2026-05-08T04:43:41.261Z"
-  },
-  {
-    "action": "click .nav-next",
-    "relativeTimeSec": 29.7,
-    "timestamp": "2026-05-08T04:43:41.506Z"
-  },
-  {
-    "action": "screenshot cyber3.png",
-    "relativeTimeSec": 30.9,
-    "timestamp": "2026-05-08T04:43:42.726Z"
-  },
-  {
-    "action": "navigate http://localhost:8081/templates/glassmorphism-fintech/template.html",
-    "relativeTimeSec": 41.6,
-    "timestamp": "2026-05-08T04:43:53.386Z"
-  },
-  {
-    "action": "screenshot fintech1.png",
-    "relativeTimeSec": 43.3,
-    "timestamp": "2026-05-08T04:43:55.095Z"
-  },
-  {
-    "action": "click .nav-next",
-    "relativeTimeSec": 43.6,
-    "timestamp": "2026-05-08T04:43:55.407Z"
-  },
-  {
-    "action": "screenshot fintech2.png",
-    "relativeTimeSec": 44.8,
-    "timestamp": "2026-05-08T04:43:56.631Z"
-  },
-  {
-    "action": "click .nav-next",
-    "relativeTimeSec": 45.2,
-    "timestamp": "2026-05-08T04:43:56.947Z"
-  },
-  {
-    "action": "screenshot fintech3.png",
-    "relativeTimeSec": 46.4,
-    "timestamp": "2026-05-08T04:43:58.159Z"
-  },
-  {
-    "action": "navigate http://localhost:8081/templates/magazine-lookbook/template.html",
-    "relativeTimeSec": 53,
-    "timestamp": "2026-05-08T04:44:04.790Z"
-  },
-  {
-    "action": "screenshot lookbook1.png",
-    "relativeTimeSec": 55.8,
-    "timestamp": "2026-05-08T04:44:07.594Z"
-  },
-  {
-    "action": "click .nav-next",
-    "relativeTimeSec": 56,
-    "timestamp": "2026-05-08T04:44:07.828Z"
-  },
-  {
-    "action": "screenshot lookbook2.png",
-    "relativeTimeSec": 57.3,
-    "timestamp": "2026-05-08T04:44:09.044Z"
-  },
-  {
-    "action": "click .nav-next",
-    "relativeTimeSec": 57.6,
-    "timestamp": "2026-05-08T04:44:09.358Z"
-  },
-  {
-    "action": "screenshot lookbook3.png",
-    "relativeTimeSec": 58.8,
-    "timestamp": "2026-05-08T04:44:10.572Z"
-  }
+	{
+		"action": "visit http://localhost:8081/templates/cyber-glitch/template.html",
+		"relativeTimeSec": 5,
+		"timestamp": "2026-05-08T04:43:16.816Z"
+	},
+	{
+		"action": "navigate http://localhost:8081/templates/cyber-glitch/template.html",
+		"relativeTimeSec": 11.1,
+		"timestamp": "2026-05-08T04:43:22.921Z"
+	},
+	{
+		"action": "screenshot cyber1.png",
+		"relativeTimeSec": 14.4,
+		"timestamp": "2026-05-08T04:43:26.207Z"
+	},
+	{
+		"action": "exec nextSlide()",
+		"relativeTimeSec": 14.7,
+		"timestamp": "2026-05-08T04:43:26.464Z"
+	},
+	{
+		"action": "click .nav-next",
+		"relativeTimeSec": 28.2,
+		"timestamp": "2026-05-08T04:43:40.023Z"
+	},
+	{
+		"action": "screenshot cyber2.png",
+		"relativeTimeSec": 29.5,
+		"timestamp": "2026-05-08T04:43:41.261Z"
+	},
+	{
+		"action": "click .nav-next",
+		"relativeTimeSec": 29.7,
+		"timestamp": "2026-05-08T04:43:41.506Z"
+	},
+	{
+		"action": "screenshot cyber3.png",
+		"relativeTimeSec": 30.9,
+		"timestamp": "2026-05-08T04:43:42.726Z"
+	},
+	{
+		"action": "navigate http://localhost:8081/templates/glassmorphism-fintech/template.html",
+		"relativeTimeSec": 41.6,
+		"timestamp": "2026-05-08T04:43:53.386Z"
+	},
+	{
+		"action": "screenshot fintech1.png",
+		"relativeTimeSec": 43.3,
+		"timestamp": "2026-05-08T04:43:55.095Z"
+	},
+	{
+		"action": "click .nav-next",
+		"relativeTimeSec": 43.6,
+		"timestamp": "2026-05-08T04:43:55.407Z"
+	},
+	{
+		"action": "screenshot fintech2.png",
+		"relativeTimeSec": 44.8,
+		"timestamp": "2026-05-08T04:43:56.631Z"
+	},
+	{
+		"action": "click .nav-next",
+		"relativeTimeSec": 45.2,
+		"timestamp": "2026-05-08T04:43:56.947Z"
+	},
+	{
+		"action": "screenshot fintech3.png",
+		"relativeTimeSec": 46.4,
+		"timestamp": "2026-05-08T04:43:58.159Z"
+	},
+	{
+		"action": "navigate http://localhost:8081/templates/magazine-lookbook/template.html",
+		"relativeTimeSec": 53,
+		"timestamp": "2026-05-08T04:44:04.790Z"
+	},
+	{
+		"action": "screenshot lookbook1.png",
+		"relativeTimeSec": 55.8,
+		"timestamp": "2026-05-08T04:44:07.594Z"
+	},
+	{
+		"action": "click .nav-next",
+		"relativeTimeSec": 56,
+		"timestamp": "2026-05-08T04:44:07.828Z"
+	},
+	{
+		"action": "screenshot lookbook2.png",
+		"relativeTimeSec": 57.3,
+		"timestamp": "2026-05-08T04:44:09.044Z"
+	},
+	{
+		"action": "click .nav-next",
+		"relativeTimeSec": 57.6,
+		"timestamp": "2026-05-08T04:44:09.358Z"
+	},
+	{
+		"action": "screenshot lookbook3.png",
+		"relativeTimeSec": 58.8,
+		"timestamp": "2026-05-08T04:44:10.572Z"
+	}
 ]

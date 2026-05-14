@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phantom Desk v11 - Quantum Order</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --foreground: #000000;
+        }
+        body { background: #fafaf9; font-family: 'Inter', sans-serif; margin: 0; overflow: hidden; }
+        .tabular-nums { font-variant-numeric: tabular-nums; }
+        
+        /* Minimal Mono Shadows */
+        .shadow-mono {
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04), 0 8px 32px rgba(0,0,0,0.06);
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- React 19 Logic -->
+    <script type="text/babel" data-presets="react,typescript">
+        const { useState, useEffect, useRef } = React;
+
+        const App = () => {
+            const [chaos, setChaos] = useState(1.0);
+            const [entangle, setEntangle] = useState(0.0);
+            const iframeRef = useRef(null);
+
+            const updateProp = (key, value) => {
+                if (iframeRef.current) {
+                    iframeRef.current.contentWindow.postMessage({
+                        type: 'UPDATE_PROP',
+                        payload: { key, value }
+                    }, '*');
+                }
+            };
+
+            return (
+                <div className="flex h-screen w-screen">
+                    {/* Workspace / Stage */}
+                    <main className="flex-1 relative bg-[#fafaf9] p-8">
+                        <div className="w-full h-full rounded-2xl overflow-hidden shadow-mono border border-black/5 bg-black">
+                            <iframe 
+                                ref={iframeRef}
+                                src="stage.html" 
+                                className="w-full h-full border-none"
+                            />
+                        </div>
+                    </main>
+
+                    {/* Inspector / Chrome */}
+                    <aside className="w-80 bg-white border-l border-black/10 p-6 flex flex-col gap-8 shadow-mono">
+                        <header>
+                            <div className="text-[10px] uppercase tracking-widest text-black/40 font-bold mb-1">Project</div>
+                            <h2 className="text-xl font-medium tracking-tight">Quantum Order</h2>
+                        </header>
+
+                        <section className="flex flex-col gap-6">
+                            {/* Chaos Slider */}
+                            <div>
+                                <div className="flex justify-between items-center mb-3">
+                                    <label className="text-[10px] uppercase tracking-widest text-black/40 font-bold">Chaos Factor</label>
+                                    <span className="tabular-nums text-sm font-medium">{(chaos * 100).toFixed(0)}%</span>
+                                </div>
+                                <input 
+                                    type="range" min="0" max="2" step="0.01" value={chaos}
+                                    onChange={(e) => {
+                                        const v = parseFloat(e.target.value);
+                                        setChaos(v);
+                                        updateProp('chaos', v);
+                                    }}
+                                    className="w-full h-1 bg-black/5 rounded-full appearance-none accent-black cursor-pointer"
+                                />
+                            </div>
+
+                            {/* Entangle Slider */}
+                            <div>
+                                <div className="flex justify-between items-center mb-3">
+                                    <label className="text-[10px] uppercase tracking-widest text-black/40 font-bold">Entanglement</label>
+                                    <span className="tabular-nums text-sm font-medium">{(entangle * 100).toFixed(0)}%</span>
+                                </div>
+                                <input 
+                                    type="range" min="0" max="1" step="0.01" value={entangle}
+                                    onChange={(e) => {
+                                        const v = parseFloat(e.target.value);
+                                        setEntangle(v);
+                                        updateProp('entangle', v);
+                                    }}
+                                    className="w-full h-1 bg-black/5 rounded-full appearance-none accent-black cursor-pointer"
+                                />
+                            </div>
+                        </section>
+
+                        <footer className="mt-auto pt-6 border-t border-black/5">
+                            <button className="w-full h-10 bg-black text-white rounded-lg text-sm font-medium hover:bg-black/80 transition-colors">
+                                Export Sequence
+                            </button>
+                        </footer>
+                    </aside>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+
+    <!-- Dependencies -->
+    <script src="https://unpkg.com/react@19/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@19/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</body>
+</html>
